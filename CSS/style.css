@@ -1,0 +1,209 @@
+:root{
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+   min-height:  100vh;
+   font-size: 2.0;
+}
+ header{
+display: grid;
+grid-template-columns:  300px 610px ;
+justify-content: center;
+padding: 20px;
+/* height: 100vh;
+width: 100vh; */
+}
+header img{
+    height: 200px;
+    width: 300px;
+    border-radius: 50%;
+left: 200px;
+    padding: 20px;
+
+}
+.head{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    
+
+}
+.head .itemStting{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    gap: 5px;
+    align-content: center;
+justify-content:flex-start;
+    /* background-color: red; */
+}
+.head .itemStting .JohnDoe{
+    font-size: 30px;
+}
+.head .itemStting button{
+background-color: white;
+/* padding: 10px; */
+border-radius: 5px;
+}
+.head .itemInfo{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    justify-content: flex-start;
+    column-gap: 5px;
+    /* background-color: aqua; */
+}
+
+head p{
+font-size: 2.188;
+}
+.bolder{
+    font-weight: bolder;
+}
+
+
+/* End HEADER */
+/* Start Main */
+main{
+display: grid;
+grid-template-columns: repeat(3,300px);
+justify-content: center;
+align-content: center;
+gap:10px;
+margin-top: 10px;
+}
+.contaner{
+    position: relative;
+    align-items: center;
+}
+
+main .contaner img{
+    /* تغير */
+    height: 300px;
+    width: 300px;
+}
+
+main .contaner .video,
+.clone{
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 90%;
+}
+ .overlay{
+    position: absolute;
+    transition: 0.5s ease;
+top: 50%;
+left: 50%;    
+align-items: center;
+display: none;
+font-size: 25px;
+}
+main .contaner:hover  .overlay{
+display:block;
+}
+
+@media screen and (min-size:220px)and(max-width:400px){
+    header{
+        display: none;
+    }
+    main{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+
+        
+        }
+        .contaner{
+            position: relative;
+            align-items: center;
+        }
+        
+        main .contaner img{
+            height: 200px;
+            width: 200px;
+        }
+        
+        main .contaner .video,
+        .clone{
+            font-size: 25px;
+            position: absolute;
+            top: 0;
+            left: 90%;
+        }
+         .overlay{
+           
+        font-size:2px;
+        
+        }
+       
+}
+
+@media  screen and (max-width:400PX) {
+   
+ header{
+    display: grid;
+    grid-template-columns:  auto 1fr ;
+    }
+    header img{
+        height: 100px;
+        width: 100px;
+        border-radius: 180px;
+    /* display: none; */
+        padding: 10px;
+    
+    }
+  
+    .head .itemStting{
+        order: 1;
+        grid-template-columns: 1fr auto;
+    
+    }
+    .head .itemStting .JohnDoe{
+        font-size: 15px;
+        order: 1;
+    }
+    .head .itemStting i{
+        order: 2;
+    }
+    .head  .itemStting
+    button {
+        order: 3;
+        font-size: 10px;
+
+    }
+   .head p {
+order: 2;
+/* font-size: 10px;/ */
+
+   }
+   .head .itemInfo{
+    order: 3;
+   }
+   
+    /* END  HEADER */
+    /* Start Main */
+    main{
+        grid-template-columns: repeat(2,1fr);
+    padding: 0 10px;
+        }
+        main .contaner img{
+            /* تغير */
+            height: 180px;
+            width: 180px;
+        }
+        
+        main .contaner .video,
+        .clone{
+            font-size: 15px;
+            left: 80%;
+        }
+         .overlay{
+        font-size: 15px;
+        }
+        
+}
