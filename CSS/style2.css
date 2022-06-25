@@ -60,6 +60,7 @@ header .itemInfo{
     column-gap: 5px;
     margin: 5px;
 }
+
 .bolder{
     font-weight: bolder;
 }
@@ -119,7 +120,7 @@ main{
 
     /* midia Qury */
 
-    @media screen and (max-width:220px){
+    @media screen and (max-width:400px){
         /* Start Head */
        
        header{
@@ -154,6 +155,8 @@ row-gap: 5px;
        }
       header .itemInfo{
     font-size: 10px;
+    /* background-color: gold; */
+
         justify-content:flex-end ;
         grid-row-start: 3;       
         grid-column-start: 1;
@@ -187,12 +190,12 @@ row-gap: 5px;
             }
     }
                 
-    @media screen and (max-width:400px){
+    @media screen and (min-width:400px) and (max-width:600px){
         /* Start Head */
        
        header{
         padding: 0 5%;
-grid-template-rows: 33% 33% 33%;
+grid-template-rows:33% 33% 33%;
 /* row-gap: 1px; */
        }
         header .itemStting {
@@ -221,16 +224,20 @@ grid-template-rows: 33% 33% 33%;
     
        }
       header .itemInfo{
-    /* font-size: 10px; */
-        /* justify-content:flex-end ; */
+     padding: 10px 80px  ;
+     margin: 0;
+     column-gap: 10px;
+     align-items: center;
+        /* background-color: gold; */
         grid-row-start: 3;       
-        grid-column-start: 1;
-        grid-row-end: 7;
+        grid-column-start: 2;
+        grid-row-end: 8;
         grid-column-end:6 ;
          border-style:solid  ;
          border-width: 1px;
          border-color: rgba(100, 100, 100, 0.538) rgba(245, 222, 179, 0) grey rgba(245, 222, 179, 0);
        }
+
     header img{
         grid-row-start: 1;       
         grid-column-start: 1;
