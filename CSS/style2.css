@@ -137,16 +137,20 @@ main{
         /* Start Head */
        
        header{
-        padding: 0 5%;
-grid-template-rows: 33% 33% 33%;
-row-gap: 5px;
+        padding: 0 1px;
+        grid-template-columns: repeat( auto-fit, minmax(220px));
+grid-template-rows: repeat(auto-fit,minmax(220px));
+row-gap: 20px;
 margin-top: 20px;
+
        }
         header .itemStting {
             grid-area:1/3/1/7 ;
     font-size: 0.625;
     grid-template-columns: repeat(2,1fr);
         align-items: center;
+        padding-right:5%;
+
         row-gap: 10px;
         }
          .itemStting .JohnDoe{
@@ -162,28 +166,33 @@ margin-top: 20px;
             /* background-color: yellow; */
             order: 3;
 width: 100%;
-grid-area: 2/1/2/5;
+grid-area: 2/1/2/3;
 font-size: 0.7rem;
 font-weight: bold;
 /* padding: 0 30px; */
         }
       header .discrbtion {
+        padding:0 5%;
     grid-row-start: 2;       
     grid-column-start: 1;
     grid-row-end: 2;
-    grid-column-end:7 ;
-    font-size: 12.5px;
+    grid-column-end:8;
+    font-size: 0.580rem;
        }
+      
       header .itemInfo{
-    font-size: 10px;
+        padding:0 5%;
+
+        grid-template-columns: repeat(auto-fit,minmax(220px));
+    font-size: 0.400rem;
     /* background-color: gold; */
     /* padding: 10px 100px; */
     height: 49px;
     margin: 0;
-column-gap: 64px;
+column-gap:42px;
 align-items: center;
-text-align: center;
-font-size: 11px;
+text-align:center;
+font-size: 0.688rem;
 
         justify-content:center ;
         grid-area: 3/1/3/8;
@@ -196,7 +205,10 @@ font-size: 11px;
         grid-row-start: 1;       
         grid-column-start: 1;
         grid-row-end: 1;
-        grid-column-end:3 ;
+        grid-column-end:4 ;
+        object-fit:scale-down;
+        padding-left:5%;
+
     }
         /* END  HEADER */
         /* Start Main */
@@ -204,11 +216,18 @@ font-size: 11px;
             grid-template-columns:auto;
         padding: 0 10px;
             }
-            
+            main .contaner{
+                height:200px ;
+            }
+            main .contaner img{
+height: 100%;
+width: 100%;
+object-fit: fill;
+            }
             main .contaner .video,
             .clone{
                 /* font-size: 1.0rem; */
-                left: 90%;
+                left: 80%;
                 top: 2%;
             }
             .overlay{
@@ -217,7 +236,7 @@ font-size: 11px;
             }
     }
                 
-    @media screen and (min-width:400px) and (max-width:600px){
+    @media screen and (min-width:400px) and (max-width:1000px){
         /* Start Head */
        
        header{
@@ -284,6 +303,7 @@ margin-top: 20px;
         grid-column-start: 1;
         grid-row-end: 1;
         grid-column-end:3 ;
+        object-fit:scale-down;
     }
         /* END  HEADER */
         /* Start Main */
@@ -292,7 +312,9 @@ margin-top: 20px;
 
         padding: 0 10px;
             }
-            
+            main .contaner img{
+                object-fit:
+            }
             main .contaner .video,
             .clone{
                 /* font-size: 1.0rem; */
